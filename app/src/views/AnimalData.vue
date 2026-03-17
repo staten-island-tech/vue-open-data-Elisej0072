@@ -1,16 +1,17 @@
 <template>
     <div>
-<h2>{{ animal.name }}</h2>
+<h2>{{ animal.species_description}}</h2>
     </div>
 </template>
 
 <script setup>
     import {onBeforeMount, ref} from 'vue'
     import {useRoute} from 'vue-router'
+    
     const route = useRoute() 
     const animal = ref(null)
     async function getAnimal(id){
-        const response = await fetch('https://data.cityofnewyork.us/api/v3/views/fuhs-xmg2/query.json')
+        const response = await fetch('https://data.cityofnewyork.us/resource/fuhs-xmg2.json')
         const data = await response.json()
         animal.value = data
         console.log(data)
@@ -26,6 +27,7 @@
             getAnimal(id)
         }
     )
+
 
 </script>
 
