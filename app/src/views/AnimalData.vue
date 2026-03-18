@@ -1,13 +1,16 @@
 <template>
     <div>
-<h2>{{ animal.species_description}}</h2>
+<h1>aniamls</h1>
+<AnimalCard v-for="(animal, index) in animal" :key="animal.location"
+:animal="animal" :id="index + 1"></AnimalCard>
     </div>
 </template>
 
 <script setup>
-    import {onBeforeMount, ref} from 'vue'
+    import {onBeforeMount, ref, watch} from 'vue'
     import {useRoute} from 'vue-router'
-    
+    import AnimalCard from '@/components/AnimalCard.vue'
+
     const route = useRoute() 
     const animal = ref(null)
     async function getAnimal(id){
@@ -16,7 +19,7 @@
         animal.value = data
         console.log(data)
     }
-
+    
     onBeforeMount(function(){
         getAnimal(route.params.id)
     })

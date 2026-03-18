@@ -5,7 +5,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/animl/:id',
+      path: '/',
       name: 'animal data',
       component: AnimalData,
     },

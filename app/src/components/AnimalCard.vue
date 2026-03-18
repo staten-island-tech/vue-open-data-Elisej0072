@@ -1,6 +1,6 @@
 <template>
-    <router-link :to='animlPath' class="card">
-<h2>{{ animal.species_description }}</h2>
+    <router-link :to='Path' class="card">
+<h2>{{ animal.location }}</h2>
 <h3>{{ id }}</h3>
     </router-link>
 </template>
@@ -18,8 +18,8 @@ import { computed } from 'vue'
     },
   })
 
-  const animlPath = computed(()=>{
-    return '/animl/$props.animal.species_description'
+  const Path = computed(()=>{
+    return '//$props.animal.location'
   })
 </script>
 
