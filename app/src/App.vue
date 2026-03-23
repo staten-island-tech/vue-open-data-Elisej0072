@@ -1,8 +1,13 @@
 <template>
   <div>
     <RouterView/>
+    <BarChart/>
   </div>
+    
 </template>
 
-<script setup></script>
+<script>
+</script>
+
+
 <style scoped></style>

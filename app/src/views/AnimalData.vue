@@ -1,8 +1,9 @@
 <template>
     <div>
 <h1>aniamls</h1>
-<AnimalCard v-for="(animal, index) in animal" :key="animal.location"
-:animal="animal" :id="index + 1"></AnimalCard>
+<AnimalCard v-for="(animal) in animal" :key="animal.species_description"
+:animal="animal" :id></AnimalCard>
+
     </div>
 </template>
 
@@ -10,6 +11,7 @@
     import {onBeforeMount, ref, watch} from 'vue'
     import {useRoute} from 'vue-router'
     import AnimalCard from '@/components/AnimalCard.vue'
+    
 
     const route = useRoute() 
     const animal = ref(null)

@@ -1,6 +1,6 @@
 <template>
     <router-link :to='Path' class="card">
-<h2>{{ animal.location }}</h2>
+<h2>{{ animal.species_description }}</h2>
 <h3>{{ id }}</h3>
     </router-link>
 </template>
