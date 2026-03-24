@@ -1,8 +1,8 @@
 <template>
     <div>
-<h1>animals</h1>
+<h1>urban wildlife animal info.</h1>
 <AnimalCard v-for="(animal) in animal" :key="animal.species_description"
-:animal="animal" :id></AnimalCard>
+:animal="animal"></AnimalCard>
 
     </div>
 </template>
@@ -39,27 +39,16 @@
 <style scoped>
 h1 {
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.card { 
+  align-items: center;
+  border: 2px solid #000000;
+  padding: 10px;
   margin-bottom: 20px;
-}
-
-.container {
   display: flex;
-  width: 80vw;
-  margin: 20px auto;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  border: 1px solid #ccc;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 </style>
