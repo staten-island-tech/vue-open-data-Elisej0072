@@ -3,7 +3,9 @@
 <h2>{{ animal.species_description }}</h2>
 <h3>{{ animal.date_and_time_of_initial }}</h3>
 <h3>{{ animal.location }}</h3>
-<h3>{{ animal.animal_condition }}</h3></div>
+</div>
+<h3>{{ animal.animal_condition }}</h3>
+
     </router-link>
 </template>
 

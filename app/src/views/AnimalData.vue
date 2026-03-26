@@ -1,8 +1,12 @@
 <template>
     <div>
-<h1>urban wildlife animal info.</h1>
+<h1>urban wildlife animal log.</h1>
+<button @click="">Bar Chart</button>
+<button @click="">Click Me</button>
+
 <AnimalCard v-for="(animal) in animal" :key="animal.species_description"
 :animal="animal"></AnimalCard>
+
 
     </div>
 </template>
@@ -11,8 +15,8 @@
     import {onBeforeMount, ref, watch} from 'vue'
     import {useRoute} from 'vue-router'
     import AnimalCard from '@/components/AnimalCard.vue'
-    
-
+    import BarChart from '@/components/BarChart.vue'
+   
     const route = useRoute() 
     const animal = ref(null)
     async function getAnimal(id){
