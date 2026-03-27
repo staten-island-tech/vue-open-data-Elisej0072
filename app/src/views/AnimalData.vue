@@ -1,12 +1,9 @@
 <template>
     <div>
 <h1>urban wildlife animal log.</h1>
-<button @click="">Bar Chart</button>
-<button @click="">Click Me</button>
 
 <AnimalCard v-for="(animal) in animal" :key="animal.species_description"
 :animal="animal"></AnimalCard>
-
 
     </div>
 </template>
@@ -36,6 +33,7 @@
             getAnimal(id)
         }
     )
+
 
 
 </script>

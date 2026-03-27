@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ["jksdfgkjdg"],
-        datasets: [ { data: [] } ]
+        labels: ["a", "b"],
+        datasets: [ { data: [ 40] } ]
       },
       chartOptions: {
         responsive: true
@@ -29,6 +29,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style scoped>
